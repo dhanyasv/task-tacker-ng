@@ -1,0 +1,22 @@
+<div class="addTaskButton" (click)="toggleAddTaskForm()"><button class="submitButton">{{addTaskButtonText}}</button></div>
+<div class="container formDiv">
+    <div class="addTaskForm" *ngIf="showaddTaskForm">
+        <form [formGroup]="addTaskForm" (ngSubmit)="onAdd()">
+            <div class="formGroup">
+                <label class="formLabel">Task Name</label>
+                <input class="formInput" type="text" formControlName="taskName" >
+            </div>
+            <div class="formGroup">
+                <label class="formLabel">Task Date</label>
+                <input class="formInput" type="text" formControlName="taskDate" >
+            </div>
+            <div class="formGroup">
+                <label class="formLabelCheck">Task Reminder</label>
+                <input class="formInputCheck" type="checkbox" formControlName="taskreminder" >
+            </div>
+            <div class="formGroup buttonFormGroup">
+                <button class="submitButton" type="submit" >ADD</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="eachTask" [ngClass]="task.taskreminder ? 'reminderOn' : '' "  (dblclick)="onToggleTask()">
+    <h3>{{task.taskName}}</h3>
+    <p>{{task.taskDate}}</p>
+    <button type="button" (click)="deleteTasks()">Delete</button>
+</div>

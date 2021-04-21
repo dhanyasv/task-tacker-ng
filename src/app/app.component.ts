@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Task } from './tasks/task.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task-tracker';
+  newTask:Task;
+
+  getDataToTasks(dataFromAdd){
+    this.newTask = dataFromAdd;
+  }
 }
