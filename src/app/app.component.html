@@ -1,5 +1,7 @@
 <div class="container">
-    <header class="headerMain"></header>
-    <add-task (newTask)="getDataToTasks($event)"></add-task>
-    <tasks [newTask]="newTask" ></tasks>
+    <header class="headerMain" ></header>
+    <!-- <add-task (newTask)="getDataToTasks($event)"></add-task>
+    <tasks [newTask]="newTask" ></tasks> -->
+    <app-general  [generalDirec]="'red'" defaultColor="yellow"></app-general>
+    <p *miscD="true">TESTING MISC DIRECTIVE</p>
 </div>
